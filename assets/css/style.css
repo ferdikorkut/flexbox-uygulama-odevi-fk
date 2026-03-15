@@ -1,0 +1,80 @@
+/* Tüm elementlerin varsayılan boşluklarını sıfırlıyoruz */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Listelerdeki noktaları kaldırıyoruz */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Linkerdeki alt çizgileri kaldırıyoruz */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Resimlerin taşmasını önlüyoruz ve alt boşluğu kaldırıyoruz */
+img {
+  max-width: 100%;
+  /* resimler taşmasın */
+  display: block;
+  /* img alt boşluğu kaldırır */
+}
+
+/* Renk değişkenleri tanımlıyoruz */
+:root {
+  --primary-color: #3498db;
+  /* Ana renk */
+  --secondary-color: #2ecc71;
+  /* İkincil renk */
+  --font-color: #333;
+  /* Yazı rengi */
+}
+
+/* Sayfanın genel düzenini yapiyoruz */
+body {
+  font-family: Arial, sans-serif;
+  /* Font verdik */
+  line-height: 1.6;
+  /* Satır yüksekliği verdik */
+  background-color: rgb(193, 193, 193);
+}
+
+header {
+  margin: 30px 0px;
+  text-align: center;
+}
+
+.card {
+  padding: 20px;
+  background-color: rgb(222, 221, 221);
+  border-radius: 8px;
+  box-shadow: 4px 6px 15px 0px rgba(0, 0, 0, 0.5);
+  flex-basis: calc(50% - 18px);
+  /* sayfada her durumda sadece 2 kart yan yana durmasi için genişlik ayarı %50 verildi fakat burda main kisminda 35px lik bir gap oldugundan dolayi hem sayfanin genisligi hem de kartlarin genisligi hesaplandiginda gap i da ekleyince sayfadan daha büyük bir alan ortaya cikiyor ve bu sefer karti asagiya aliyor. mantiken sayfadan daha büyük bir genislik ortaya cikiyor.bu yüzden sayfanin yarisindan gapin yarisini düsmemiz gerekiyor ki sayfanin tüm alanini tam doldurabilsin */
+  flex-grow: 1;
+  /* kartlarin genisligi için (kartlari yerlestirdiginde)arta kalan bosluk var ise bu bosluklari tüm satiri kac oraninda kaplasin ayarini yapar. yani bir kart tek basina bir satirda kalirsa 1 degeri verildiginde tüm satiri tek basina kaplar */
+}
+
+.card-5 {
+  flex-basis: calc(60% - 18px);
+  /* flex-grow: 2; */
+}
+
+.card-6 {
+  flex-basis: calc(40% - 18px);
+  /* flex-grow: 1; */
+}
+
+main {
+  padding: 0px 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 36px;
+}
