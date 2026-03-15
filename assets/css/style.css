@@ -3,6 +3,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  button, input, select, textarea {
+  font: inherit;
+}
 }
 
 /* Listelerdeki noktaları kaldırıyoruz */
@@ -42,6 +45,7 @@ body {
   line-height: 1.6;
   /* Satır yüksekliği verdik */
   background-color: rgb(193, 193, 193);
+  font-size: larger;
 }
 
 header {
@@ -73,7 +77,8 @@ header {
   /* flex-grow: 1; */
 }
 button {
-  padding: 10px 20px;
+  padding: 10px 15px;
+  margin-top: 5px;
   background-color: var(--primary-color);
   color: #fff;
   border: none;
